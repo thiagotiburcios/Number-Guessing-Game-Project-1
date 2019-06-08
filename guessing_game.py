@@ -37,7 +37,7 @@ def start_game():
         else:
             print("""\nWell done! You got it. 
             \nIt took you {} times.""".format(current_score))
-            if highscore.__eq__(None):
+            if highscore is None:
                 highscore = current_score
             elif current_score < highscore:
                 highscore = current_score
