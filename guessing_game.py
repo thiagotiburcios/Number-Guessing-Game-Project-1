@@ -22,7 +22,7 @@ def start_game():
                 picks = input("\nPlease, pick a number between 1 and 10: ")
                 picks = int(picks)
 
-                if picks in range(1, 10):
+                if picks in range(RANGE_START, RANGE_END):
                     current_score += 1
 
                     if picks > answer_solution:
