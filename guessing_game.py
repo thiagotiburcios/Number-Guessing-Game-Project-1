@@ -41,7 +41,7 @@ def start_game():
                 highscore = current_score
             elif current_score < highscore:
                 highscore = current_score
-            play_again = input("\nWould you like to play again? [y]es or [n]o  ")
+            play_again = str(input("\nWould you like to play again? [y]es or [n]o  "))
             picks -= 1
 
             print("\n***** The HIGHSCORE is: {} *****".format(highscore))
