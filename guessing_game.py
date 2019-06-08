@@ -1,13 +1,14 @@
 import random
 
+RANGE_START = 1
+RANGE_END = 11
+
 
 def start_game():
 
     print(" ******** WELCOME TO THE GUESSING GAME *********** \n ")
-
-    answer_solution = random.randint(1, 10)
+    answer_solution = random.randint(RANGE_START, RANGE_END)
     picks = -1
-
     highscore = None
 
     play_again = "y"
@@ -41,8 +42,9 @@ def start_game():
                 highscore = current_score
             elif current_score < highscore:
                 highscore = current_score
-            play_again = input("\nWould you like to play again? [y]es or [n]o  ")
+            play_again = input("\nWould you like to play again? [y]es or [n]o  ").lower()
             picks -= 1
+            answer_solution = random.randint(RANGE_START, RANGE_END)
 
             print("\n***** The HIGHSCORE is: {} *****".format(highscore))
 
